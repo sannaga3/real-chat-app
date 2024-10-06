@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.room-form-label {
+  @apply block text-sm font-medium text-gray-700;
+}
+
+.room-form-input {
+  @apply mt-1 block w-full p-2 border border-gray-300 rounded-md;
+}
