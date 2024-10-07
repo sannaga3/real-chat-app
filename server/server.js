@@ -10,7 +10,7 @@ dotenv.config();
 /* eslint-disable no-undef */
 const app = express();
 const corsOptions = {
-  origin: process.env.CORS_ORIGIN,
+  origin: process.env.CORS_ORIGIN || "http://localhost:5173",
   methods: ["GET", "POST"],
   credentials: true,
 };
@@ -23,7 +23,7 @@ const io = new SocketIOServer(server, {
 
 socketRoutes(io);
 
-const port = process.env.SERVER_PORT;
+const port = process.env.SERVER_PORT || 4000;
 /* eslint-enable no-undef */
 server.listen(port, () => {
   console.log(`Server is running on port ${port}`);

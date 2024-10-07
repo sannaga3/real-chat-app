@@ -1,8 +1,10 @@
 import io from "socket.io-client";
 import { create } from "zustand";
 
+const serverUrl = import.meta.env.VITE_SERVER_URL || "http://localhost:4000";
+
 const createInstance = () => {
-  return io(import.meta.env.VITE_SERVER_URL, {
+  return io(serverUrl, {
     withCredentials: true,
     reconnection: true, // 自動再接続有効
     reconnectionAttempts: 5, // 再接続の試行回数
