@@ -1,6 +1,6 @@
 import dayjs from "dayjs";
-import { rooms } from "../controllers/roomController.js";
-import { Message } from "./Message.js";
+import { rooms } from "./controllers/roomController.js";
+import { Message } from "./message.js";
 
 class Room {
   constructor(socketId, name, password, nickname) {
